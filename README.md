@@ -10,7 +10,8 @@ The `KUBECONFIG` file, which is required for accessing your Kubernetes cluster, 
 
 ### 2. Flux Bootstrap Manifests
 
-Bootstrapping Flux creates various manifest files in the `manifests` folder. These files are crucial for managing the state of your Kubernetes cluster with Flux. However, the `manifests` folder and its contents are not included in this repository. You will need to bootstrap Flux yourself and generate these files.
+Bootstrapping Flux creates various manifest files in the manifests folder, which are crucial for managing the state of your Kubernetes cluster with Flux. Although the manifests folder and its contents are already present in this repository, the bootstrapping of the cluster still needs to be performed by you to generate any additional necessary files and complete the setup.
+With Flux installed, all the resources specified in the manifests folder will be created. You will only need to update the URLs in the **git-repository.yaml** and **image-repository.yaml**files.
 
 ## 3. CI Configuration
 

@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: app-image
+  namespace: web
+spec:
+  image: ghcr.io/x-cellent/page-timestamp # Update with your own GitHub username
+  interval: 5m
+  secretRef:
+    name: ghcr-secret

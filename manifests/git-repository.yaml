@@ -1,0 +1,12 @@
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: app-repo
+  namespace: web
+spec:
+  interval: 1m
+  url: https://github.com/x-cellent/Flux-Developerguide.git
+  ref:
+    branch: main
+  secretRef:
+    name: git-secret
