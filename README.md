@@ -13,6 +13,10 @@ The `KUBECONFIG` file, which is required for accessing your Kubernetes cluster, 
 Bootstrapping Flux creates various manifest files in the manifests folder, which are crucial for managing the state of your Kubernetes cluster with Flux. Although the manifests folder and its contents are already present in this repository, the bootstrapping of the cluster still needs to be performed by you to generate any additional necessary files and complete the setup.
 With Flux installed, all the resources specified in the manifests folder will be created. You will only need to update the URLs in the **git-repository.yaml** and **image-repository.yaml**files.
 
+### 3. Missing Secrets
+
+To grant Flux access to your repository and your cluster, you need to create the ghcr-secret and git-secret secrets in your cluster. For detailed instructions, refer to the[Metal Stack Cloud Developer Guides](https://metalstack.cloud/en/documentation/DeveloperGuide/flux)
+
 ## 3. CI Configuration
 
 This repository includes a sample `CI.yaml` file which you can use to run your own CI pipeline. This pipeline packages the `index.html` file as a Docker image and pushes it to GitHub Container Registry (GHCR), replacing the version with the current timestamp.
